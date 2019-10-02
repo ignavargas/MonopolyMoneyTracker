@@ -47,7 +47,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textColorHighlight="#BFDBAE"
-        android:textCursorDrawable="#BFDBAE"
         app:layout_constraintBottom_toTopOf="@+id/playButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
