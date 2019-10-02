@@ -19,8 +19,10 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/userName"
@@ -96,8 +98,10 @@
         android:layout_height="60dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="38dp"
+        android:layout_marginEnd="61dp"
         android:backgroundTint="#8FBC72"
         android:text="10%"
+        app:layout_constraintEnd_toStartOf="@+id/goButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/payButton" />
 
@@ -117,6 +121,7 @@
         android:layout_width="115dp"
         android:layout_height="60dp"
         android:layout_marginStart="148dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="171dp"
         android:backgroundTint="#FFFFFF"
@@ -124,5 +129,6 @@
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
