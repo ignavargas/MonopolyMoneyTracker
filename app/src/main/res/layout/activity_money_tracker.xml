@@ -58,7 +58,7 @@
         android:layout_marginStart="199dp"
         android:layout_marginTop="109dp"
         android:layout_marginEnd="199dp"
-        android:text="1500"
+        android:text="NaN"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

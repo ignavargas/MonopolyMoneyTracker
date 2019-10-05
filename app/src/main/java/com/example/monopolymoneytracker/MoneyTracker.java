@@ -14,10 +14,8 @@ import android.widget.TextView;
 public class MoneyTracker extends AppCompatActivity {
 
     private String userName;
-    private int total = 0;
-    private static String percent = "10%";
+    private int total;
     Button pay, deal, tax, payday, win;
-    //Button acceptPay, cancelPay;
     EditText paymentDialog;
     TextView title, amount;
     Accounter accounter;
@@ -29,12 +27,13 @@ public class MoneyTracker extends AppCompatActivity {
 
         Intent intent = getIntent();
         setUserName(intent.getStringExtra("username"));
+        setTotal(Integer.parseInt(intent.getStringExtra("totalmoney")));
 
         title = (TextView) findViewById(R.id.userName);
         title.setText(this.userName);
 
         amount = (TextView) findViewById(R.id.totalMoney);
-        this.total = Integer.parseInt(amount.getText().toString());
+        amount.setText(Integer.toString(this.total));
 
         deal = (Button) findViewById(R.id.dealButon);
         deal.setOnClickListener(new View.OnClickListener() {
@@ -160,10 +159,15 @@ public class MoneyTracker extends AppCompatActivity {
         this.userName = user;
     }
 
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
     public void setDeal(){
 
         Intent intent = new Intent(this, Trader.class);
         intent.putExtra("username", this.userName);
+        intent.putExtra("totalmoney", Integer.toString(this.total));
         startActivity(intent);
     }
 

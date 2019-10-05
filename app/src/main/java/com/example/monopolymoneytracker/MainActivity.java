@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, MoneyTracker.class);
         intent.putExtra("username", this.username);
+        intent.putExtra("totalmoney", "2000");
         startActivity(intent);
     }
 }
