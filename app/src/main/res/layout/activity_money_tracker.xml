@@ -24,81 +24,41 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="118dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="20dp"
-        android:text="JHON DOE"
-        android:textColor="@android:color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/toolbar2"
-        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="260dp"
-        android:text="Dinero Total: "
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
-
-    <TextView
-        android:id="@+id/totalMoney"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="199dp"
-        android:layout_marginTop="109dp"
-        android:layout_marginEnd="199dp"
-        android:text="NaN"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
-
     <Button
         android:id="@+id/payButton"
         android:layout_width="115dp"
         android:layout_height="60dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="149dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="60dp"
         android:backgroundTint="#8FBC72"
         android:text="Pagar"
         app:layout_constraintBottom_toTopOf="@+id/percentButton"
         app:layout_constraintEnd_toStartOf="@+id/dealButon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/totalMoney"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <Button
-        android:id="@+id/dealButon"
+        android:id="@+id/goButton"
         android:layout_width="115dp"
         android:layout_height="60dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginBottom="38dp"
-        android:backgroundTint="#8FBC72"
-        android:text="Trato"
-        app:layout_constraintBottom_toTopOf="@+id/goButton"
+        android:backgroundTint="#C70000"
+        android:text="GO!"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+        app:layout_constraintStart_toEndOf="@+id/percentButton"
+        app:layout_constraintTop_toBottomOf="@+id/dealButon" />
 
     <Button
         android:id="@+id/percentButton"
         android:layout_width="115dp"
         android:layout_height="60dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="61dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="60dp"
         android:backgroundTint="#8FBC72"
         android:text="10%"
         app:layout_constraintEnd_toStartOf="@+id/goButton"
@@ -106,15 +66,20 @@
         app:layout_constraintTop_toBottomOf="@+id/payButton" />
 
     <Button
-        android:id="@+id/goButton"
-        android:layout_width="115dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="38dp"
+        android:id="@+id/dealButon"
+        android:layout_width="116dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="212dp"
         android:layout_marginEnd="60dp"
-        android:backgroundTint="#C70000"
-        android:text="GO!"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="#8FBC72"
+        android:text="Trato"
+        app:layout_constraintBottom_toTopOf="@+id/goButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dealButon" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/payButton"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <Button
         android:id="@+id/otherButton"
@@ -131,4 +96,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/percentButton" />
+
+    <TextView
+        android:id="@+id/totalMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="199dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="199dp"
+        android:text="NaN"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="118dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="28dp"
+        android:text="JHON DOE"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="260dp"
+        android:text="Dinero Total: "
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

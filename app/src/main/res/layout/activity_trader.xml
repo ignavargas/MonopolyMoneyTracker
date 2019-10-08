@@ -39,12 +39,12 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="227dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="45dp"
         android:text="Cantidad que doy:"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/totalFromMe"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarTrate" />
 
@@ -52,37 +52,36 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="209dp"
-        android:layout_marginBottom="344dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="24dp"
         android:text="Cantidad que recibo:"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/totalFromThem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
         android:id="@+id/totalFromMe"
         android:layout_width="160dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="29dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="number"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarTrate" />
 
     <EditText
         android:id="@+id/totalFromThem"
         android:layout_width="160dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="82dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="113dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/cancelTrateButton"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalFromMe" />
 
@@ -90,9 +89,8 @@
         android:id="@+id/acceptDealButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="177dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="176dp"
         android:backgroundTint="#8FBC72"
         android:text="Aceptar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,11 +101,13 @@
         android:id="@+id/cancelTrateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="72dp"
         android:layout_marginBottom="176dp"
         android:backgroundTint="#C70000"
         android:text="Cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/acceptDealButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
