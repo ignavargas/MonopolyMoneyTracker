@@ -10,7 +10,11 @@ public class Accounter {
     public int updatePayment(int total, int payValue){
 
 
-        total -= payValue;
+        if(total > payValue) {
+            total -= payValue;
+        }else{
+            total = 0;
+        }
 
         return total;
     }

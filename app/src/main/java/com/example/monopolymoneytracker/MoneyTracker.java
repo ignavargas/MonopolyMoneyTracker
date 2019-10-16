@@ -165,16 +165,20 @@ public class MoneyTracker extends AppCompatActivity {
 
     public void setDeal(){
 
-        Intent intent = new Intent(this, Trader.class);
-        intent.putExtra("username", this.userName);
-        intent.putExtra("totalmoney", Integer.toString(this.total));
-        startActivity(intent);
+        if(this.total > 0 ) {
+            Intent intent = new Intent(this, Trader.class);
+            intent.putExtra("username", this.userName);
+            intent.putExtra("totalmoney", Integer.toString(this.total));
+            startActivity(intent);
+        }
     }
 
     public void pay(int value){
 
         accounter = new Accounter();
-        this.total = accounter.updatePayment(this.total, value);
+        if(this.total > 0 ) {
+            this.total = accounter.updatePayment(this.total, value);
+        }
         amount.setText(Integer.toString(this.total));
 
     }
@@ -183,7 +187,10 @@ public class MoneyTracker extends AppCompatActivity {
 
         accounter = new Accounter();
 
-        int result = accounter.getTenPercent(this.total);
+        int result = 0;
+        if(this.total > 0) {
+            result = accounter.getTenPercent(this.total);
+        }
 
         return Integer.toString(result);
     }
